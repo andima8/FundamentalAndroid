@@ -9,6 +9,7 @@ import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kotlin.andi.fundamentalandroid.adapter.UserAdapter
+import com.kotlin.andi.fundamentalandroid.model.User
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -95,15 +96,15 @@ class MainActivity : AppCompatActivity() {
         for (i in name.indices) {
             dataUser.add(
                 User(
-                        avatar.getResourceId(i, 0),
-                company[i],
-                follower[i],
-                following[i],
-                location[i],
-                name[i],
-                repository[i],
-                username[i]
-            )
+                    avatar.getResourceId(i, 0),
+                    company[i],
+                    follower[i],
+                    following[i],
+                    location[i],
+                    name[i],
+                    repository[i],
+                    username[i]
+                )
             )
         }
         displayList.addAll(dataUser)

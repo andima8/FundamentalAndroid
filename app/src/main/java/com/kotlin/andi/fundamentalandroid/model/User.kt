@@ -1,4 +1,4 @@
-package com.kotlin.andi.fundamentalandroid
+package com.kotlin.andi.fundamentalandroid.model
 
 
 import android.os.Parcelable

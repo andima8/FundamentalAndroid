@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.kotlin.andi.fundamentalandroid.R
-import com.kotlin.andi.fundamentalandroid.User
+import com.kotlin.andi.fundamentalandroid.model.User
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.user_list.*
 

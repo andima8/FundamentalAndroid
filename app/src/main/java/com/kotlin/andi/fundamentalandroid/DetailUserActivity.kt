@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.transition.Fade
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.kotlin.andi.fundamentalandroid.model.User
 import kotlinx.android.synthetic.main.activity_detail_user.*
 
 
