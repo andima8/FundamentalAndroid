@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FundamentalAndroid</string>
+    <string name="app_name">Github User</string>
     <!-- Other string resources-->
 
     <string-array name="username">
