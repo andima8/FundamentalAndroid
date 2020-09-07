@@ -29,10 +29,10 @@ class DetailUserActivity : AppCompatActivity() {
 
         tv_name.text = data?.name
         tv_username.text = getString(R.string.username_logo, data?.username)
-        showFollower.text = data?.follower
-        showFollowing.text = data?.following
+        showFollower.text = data?.follower.toString()
+        showFollowing.text = data?.following.toString()
         showCompany.text = data?.company
-        showRepo.text = data?.repository
+        showRepo.text = data?.repository.toString()
         showLocation.text = data?.location
         Glide.with(this).load(data?.avatar).into(profile_user)
 
