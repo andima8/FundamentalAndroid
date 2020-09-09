@@ -20,12 +20,14 @@ class DetailUserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_user)
         setupWindowAnimations()
 
+        val data = intent.getParcelableExtra<User>(EXTRA_USER)
+
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.title = "Detail User"
+        supportActionBar?.title = data?.name
         supportActionBar?.setDisplayShowTitleEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val data = intent.getParcelableExtra<User>(EXTRA_USER)
+
 
         tv_name.text = data?.name
         tv_username.text = getString(R.string.username_logo, data?.username)

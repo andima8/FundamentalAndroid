@@ -1,16 +1,19 @@
 package com.kotlin.andi.fundamentalandroid.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.kotlin.andi.fundamentalandroid.DetailUserActivity
 import com.kotlin.andi.fundamentalandroid.R
 import com.kotlin.andi.fundamentalandroid.model.User
 import kotlinx.android.synthetic.main.user_list.view.*
 
 
-class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>(){
+class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     private val uData = ArrayList<User>()
     private var onItemClickCallback: OnItemClickCallback? = null
 
@@ -34,6 +37,17 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>(){
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         holder.bind(uData[position])
+        val dataUser = uData[position]
+        holder.itemView.setOnClickListener {
+            onItemClickCallback?.onItemClicked(
+                dataUser
+            )
+            val detailIntent = Intent(it.context, DetailUserActivity::class.java)
+            detailIntent.putExtra(DetailUserActivity.EXTRA_USER, dataUser)
+            it.context.startActivity(detailIntent)
+        }
+
+
     }
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -47,7 +61,8 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>(){
             }
         }
     }
-    interface OnItemClickCallback{
+
+    interface OnItemClickCallback {
         fun onItemClicked(user: User)
     }
 }

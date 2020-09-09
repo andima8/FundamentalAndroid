@@ -2,66 +2,49 @@ package com.kotlin.andi.fundamentalandroid
 
 import android.os.Bundle
 import android.view.View
+import android.view.animation.BounceInterpolator
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kotlin.andi.fundamentalandroid.adapter.UserAdapter
-import com.kotlin.andi.fundamentalandroid.model.User
+import com.kotlin.andi.fundamentalandroid.viewmodel.MainViewModel
+import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
-    /* private var dataUser: MutableList<User> = mutableListOf()*/
+
     private lateinit var searchView: SearchView
     private lateinit var mainViewModel: MainViewModel
     private lateinit var adapter: UserAdapter
-    private var dataList: ArrayList<User> = ArrayList()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.title = ""
         supportActionBar?.setLogo(R.drawable.github)
         supportActionBar?.setDisplayUseLogoEnabled(true)
 
         searchView = findViewById(R.id.sv_main)
         adapter = UserAdapter()
-        /*rv_user.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            rv_user.setHasFixedSize(true)
-            rv_user.adapter = ScaleInAnimationAdapter(
-                UserAdapter(
-                    this@MainActivity,
-                    displayList
-                ) {
-                    val detailIntent = Intent(this@MainActivity, DetailUserActivity::class.java)
-                    detailIntent.putExtra(DetailUserActivity.EXTRA_USER, it)
-                    setupWindowAnimations()
-                    startActivity(detailIntent)
-                }).apply {
-                setDuration(1000)
-                setInterpolator(BounceInterpolator())
-                setFirstOnly(false)
-            }
-        }*/
-
 
         mainViewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
         ).get(MainViewModel::class.java)
 
+
+
+        searchView.queryHint = "Search Username"
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 if (query != null) {
                     if(query.isNotEmpty()){
-                        dataList.clear()
-                        viewConfig()
+                        searchAdapterViewConfig()
                         mainViewModel.setUsers(query)
                         showLoading(true)
                         configMainViewModel(adapter)
@@ -69,29 +52,27 @@ class MainActivity : AppCompatActivity() {
                         return true
                     }
                 }
-
-                return true
+                return false
             }
-
-
             override fun onQueryTextChange(query: String?): Boolean {
                 return false
             }
         })
-
+        searchAdapterViewConfig()
+        configMainViewModel(adapter)
     }
 
-    /*private fun setupWindowAnimations() {
-        val slide = Slide()
-        slide.duration = 1000
-        window.exitTransition = slide
-    }*/
 
-    private fun viewConfig() {
+    private fun searchAdapterViewConfig() {
         rv_user.layoutManager = LinearLayoutManager(this)
         rv_user.setHasFixedSize(true)
         adapter.notifyDataSetChanged()
-        rv_user.adapter = adapter
+        rv_user.adapter = ScaleInAnimationAdapter(adapter).apply {
+            setDuration(1000)
+            setInterpolator(BounceInterpolator())
+            setFirstOnly(false)
+        }
+
     }
 
     private fun configMainViewModel(adapter: UserAdapter){
