@@ -11,8 +11,8 @@
         android:roundIcon="@drawable/github"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".DetailUserActivity" />
+        <activity android:name=".view.MainActivity"/>
+        <activity android:name=".view.DetailUserActivity" />
         <activity android:name=".SplashScreen"
             android:noHistory="true"
             >

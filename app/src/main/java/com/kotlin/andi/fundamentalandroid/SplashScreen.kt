@@ -3,9 +3,13 @@ package com.kotlin.andi.fundamentalandroid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kotlin.andi.fundamentalandroid.view.LoadingImplementation
+import com.kotlin.andi.fundamentalandroid.view.LoadingView
+import com.kotlin.andi.fundamentalandroid.view.MainActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
-class SplashScreen : AppCompatActivity(), LoadingImplementation {
+class SplashScreen : AppCompatActivity(),
+    LoadingImplementation {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)

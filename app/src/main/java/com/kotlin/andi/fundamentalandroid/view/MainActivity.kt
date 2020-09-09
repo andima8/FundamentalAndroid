@@ -1,4 +1,4 @@
-package com.kotlin.andi.fundamentalandroid
+package com.kotlin.andi.fundamentalandroid.view
 
 import android.os.Bundle
 import android.view.View
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.kotlin.andi.fundamentalandroid.R
 import com.kotlin.andi.fundamentalandroid.adapter.UserAdapter
 import com.kotlin.andi.fundamentalandroid.viewmodel.MainViewModel
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
@@ -36,8 +37,6 @@ class MainActivity : AppCompatActivity() {
             this,
             ViewModelProvider.NewInstanceFactory()
         ).get(MainViewModel::class.java)
-
-
 
         searchView.queryHint = "Search Username"
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {

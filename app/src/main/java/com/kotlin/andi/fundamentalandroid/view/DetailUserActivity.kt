@@ -1,9 +1,11 @@
-package com.kotlin.andi.fundamentalandroid
+package com.kotlin.andi.fundamentalandroid.view
 
 import android.os.Bundle
 import android.transition.Fade
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.kotlin.andi.fundamentalandroid.R
+import com.kotlin.andi.fundamentalandroid.adapter.ViewPagerAdapter
 import com.kotlin.andi.fundamentalandroid.model.User
 import kotlinx.android.synthetic.main.activity_detail_user.*
 
@@ -14,7 +16,6 @@ class DetailUserActivity : AppCompatActivity() {
         const val EXTRA_USER = "extra_user"
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_user)
@@ -22,21 +23,17 @@ class DetailUserActivity : AppCompatActivity() {
 
         val data = intent.getParcelableExtra<User>(EXTRA_USER)
 
+        tv_name.text = data?.username.toString()
+        val username = data?.username
+        Glide.with(this).load(data?.avatar).into(profile_user)
+
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.title = data?.name
+        supportActionBar?.title = "${username}"
         supportActionBar?.setDisplayShowTitleEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
-
-        tv_name.text = data?.name
-        tv_username.text = getString(R.string.username_logo, data?.username)
-        showFollower.text = data?.follower.toString()
-        showFollowing.text = data?.following.toString()
-        showCompany.text = data?.company
-        showRepo.text = data?.repository.toString()
-        showLocation.text = data?.location
-        Glide.with(this).load(data?.avatar).into(profile_user)
+        viewpager_detail.adapter = ViewPagerAdapter(this, supportFragmentManager, username!!)
+        tabs_detail.setupWithViewPager(viewpager_detail)
 
     }
 

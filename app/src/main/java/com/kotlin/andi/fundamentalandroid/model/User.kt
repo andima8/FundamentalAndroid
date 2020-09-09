@@ -9,10 +9,12 @@ data class User(
     var id: Int = 0,
     var avatar: String? = null,
     var company: String? = null,
-    var follower:  Int = 0,
-    var following:  Int = 0,
+    var follower:  String? = null,
+    var followersUrl: String? = null,
+    var following:  String? = null,
+    var followingUrl:  String? = null,
     var location: String? = null,
     var name: String? = null,
-    var repository:  Int = 0,
+    var repository:  String? = null,
     var username: String? = null
 ): Parcelable
