@@ -17,7 +17,7 @@ class FragmentViewModel: ViewModel() {
     fun setFollowers(username: String) {
         val listUser = ArrayList<User>()
         val client =  AsyncHttpClient()
-        client.addHeader("Authorization","token b260b208c163274d887182f921b43c13450dd61f")
+        client.addHeader("Authorization","token 6421bccce2b34308de4edbf32fa0832287bb926a")
         client.addHeader("User-Agent", "request")
         val url = "https://api.github.com/users/${username}/followers"
         client.get(url, object : AsyncHttpResponseHandler() {
@@ -66,7 +66,7 @@ class FragmentViewModel: ViewModel() {
     fun setFollowing(username: String) {
         val listUser = ArrayList<User>()
         val client =  AsyncHttpClient()
-        client.addHeader("Authorization","token b260b208c163274d887182f921b43c13450dd61f")
+        client.addHeader("Authorization","token 6421bccce2b34308de4edbf32fa0832287bb926a")
         client.addHeader("User-Agent", "request")
         val url = "https://api.github.com/users/${username}/following"
         client.get(url, object : AsyncHttpResponseHandler() {

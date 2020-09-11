@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         searchView.queryHint = searchHint
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
+                rv_user.invisible()
                 showLoading(true)
                 mainViewModel.setUsers(query)
                 return true
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
 
     private fun searchAdapterViewConfig() {
         rv_user.layoutManager = LinearLayoutManager(this)
@@ -87,6 +89,7 @@ class MainActivity : AppCompatActivity() {
                     tv_notFound.invisible()
                     iv_notFound.invisible()
                 }
+                rv_user.visible()
                 showLoading(false)
             }
         })
@@ -107,11 +110,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun showLoading(state: Boolean) {
         if (state) {
-            progressBar.visible()
             iv_search.invisible()
             tv_searchHere.invisible()
+            tv_notFound.invisible()
+            iv_notFound.invisible()
+            sp_loading.visible()
+            sp_loading.playAnimation()
         } else {
-            progressBar.invisible()
+            sp_loading.invisible()
+            sp_loading.pauseAnimation()
         }
     }
 }

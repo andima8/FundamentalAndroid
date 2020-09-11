@@ -14,10 +14,11 @@ class MainViewModel: ViewModel() {
 
     val listUsers = MutableLiveData<ArrayList<User>>()
     val listUser = ArrayList<User>()
+    val usersDetail = MutableLiveData<User>()
 
     fun setUsers(username: String?){
         val client =  AsyncHttpClient()
-        client.addHeader("Authorization","token b260b208c163274d887182f921b43c13450dd61f")
+        client.addHeader("Authorization","token 6421bccce2b34308de4edbf32fa0832287bb926a")
         client.addHeader("User-Agent", "request")
         val url = "https://api.github.com/search/users?q=${username}"
         client.get(url, object : AsyncHttpResponseHandler() {
@@ -67,10 +68,8 @@ class MainViewModel: ViewModel() {
 
 
     fun setDetailUsers(username: String?){
-        val listDetailUser = ArrayList<User>()
         val client =  AsyncHttpClient()
-        client.addHeader("Authorization","token b260b208c163274d887182f921b43c13450dd61f")
-        client.addHeader("Authorization","token b260b208c163274d887182f921b43c13450dd61f")
+        client.addHeader("Authorization","token 6421bccce2b34308de4edbf32fa0832287bb926a")
         client.addHeader("User-Agent", "request")
         val url = " https://api.github.com/users/${username}"
         client.get(url, object: AsyncHttpResponseHandler(){
@@ -93,8 +92,8 @@ class MainViewModel: ViewModel() {
                     userDetail.followersUrl = jsonObject.getString("followers_url")
                     userDetail.following = jsonObject.getString("following")
                     userDetail.followingUrl = jsonObject.getString("following_url")
-                    listDetailUser.add(userDetail)
-                    listUsers.postValue(listDetailUser)
+                   // listDetailUser.add(userDetail)
+                    usersDetail.postValue(userDetail)
                 } catch (e: Exception) {
                     Log.d("Exception", e.message.toString())
                 }
@@ -112,8 +111,8 @@ class MainViewModel: ViewModel() {
         })
     }
 
-    fun getDetailUsers(): LiveData<ArrayList<User>>{
-        return listUsers
+    fun getDetailUsers(): LiveData<User>{
+        return usersDetail
     }
 
 }

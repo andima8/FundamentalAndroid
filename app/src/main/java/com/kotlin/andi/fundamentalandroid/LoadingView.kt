@@ -1,4 +1,4 @@
-package com.kotlin.andi.fundamentalandroid.view
+package com.kotlin.andi.fundamentalandroid
 
 import android.os.AsyncTask
 
