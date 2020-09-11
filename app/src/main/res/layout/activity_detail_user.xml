@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005" />
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <TextView
         android:id="@+id/tv_name"
@@ -44,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:paddingBottom="24dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tv_name"
         app:layout_constraintStart_toStartOf="@+id/tv_name"
@@ -52,6 +53,7 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs_detail"
+            app:tabBackground="@drawable/tab_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top" />

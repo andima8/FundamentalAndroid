@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Github User</string>
     <!-- Other string resources-->
 
@@ -115,7 +115,14 @@
     <string name="repository">Repository</string>
     <string name="location">Location</string>
     <string name="search">Search</string>
+    <string name="language">Change Language Setting</string>
+    <string name="search_hint">Search Username</string>
+    <string name="user_not_found">User Not Found</string>
+    <string name="your_search_show_here">Your Search Show Here</string>
+    <string name="search_not_found">Search Not Found</string>
+    <string name="start_search">Start Search</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

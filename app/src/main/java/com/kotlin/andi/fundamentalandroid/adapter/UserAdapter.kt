@@ -12,8 +12,8 @@ import com.kotlin.andi.fundamentalandroid.model.User
 import kotlinx.android.synthetic.main.user_list.view.*
 
 
-class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
-    private val uData = ArrayList<User>()
+class UserAdapter(private val uData: ArrayList<User>) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+
     private var onItemClickCallback: OnItemClickCallback? = null
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -33,6 +33,7 @@ class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     }
 
     override fun getItemCount(): Int = uData.size
+
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         holder.bind(uData[position])

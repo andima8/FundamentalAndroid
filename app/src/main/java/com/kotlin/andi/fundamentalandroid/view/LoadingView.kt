@@ -2,7 +2,6 @@ package com.kotlin.andi.fundamentalandroid.view
 
 import android.os.AsyncTask
 
-
 interface LoadingImplementation {
     fun loading()
 }
