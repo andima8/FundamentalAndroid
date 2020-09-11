@@ -76,6 +76,14 @@ class MainActivity : AppCompatActivity() {
             setInterpolator(BounceInterpolator())
             setFirstOnly(false)
         }
+        adapter.setOnItemClickCallback(object : UserAdapter.OnItemClickCallback {
+            override fun onItemClicked(user: User) {
+                val detailIntent = Intent(this@MainActivity,DetailUserActivity::class.java)
+                detailIntent.putExtra(DetailUserActivity.EXTRA_USER, user)
+                startActivity(detailIntent)
+            }
+
+        })
     }
 
     private fun configMainViewModel(adapter: UserAdapter) {
@@ -90,6 +98,8 @@ class MainActivity : AppCompatActivity() {
                     iv_notFound.invisible()
                 }
                 rv_user.visible()
+                tv_searchHere.invisible()
+                iv_search.invisible()
                 showLoading(false)
             }
         })

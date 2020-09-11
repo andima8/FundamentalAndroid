@@ -18,7 +18,7 @@ class MainViewModel: ViewModel() {
 
     fun setUsers(username: String?){
         val client =  AsyncHttpClient()
-        client.addHeader("Authorization","token 6421bccce2b34308de4edbf32fa0832287bb926a")
+        client.addHeader("Authorization","token 3d67cafe4d59b005a32939415427d246028c9d84")
         client.addHeader("User-Agent", "request")
         val url = "https://api.github.com/search/users?q=${username}"
         client.get(url, object : AsyncHttpResponseHandler() {
@@ -69,7 +69,7 @@ class MainViewModel: ViewModel() {
 
     fun setDetailUsers(username: String?){
         val client =  AsyncHttpClient()
-        client.addHeader("Authorization","token 6421bccce2b34308de4edbf32fa0832287bb926a")
+        client.addHeader("Authorization","token 3d67cafe4d59b005a32939415427d246028c9d84")
         client.addHeader("User-Agent", "request")
         val url = " https://api.github.com/users/${username}"
         client.get(url, object: AsyncHttpResponseHandler(){

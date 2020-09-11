@@ -38,16 +38,6 @@ class UserAdapter(private val uData: ArrayList<User>) : RecyclerView.Adapter<Use
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         holder.bind(uData[position])
         val dataUser = uData[position]
-        holder.itemView.setOnClickListener {
-            onItemClickCallback?.onItemClicked(
-                dataUser
-            )
-            val detailIntent = Intent(it.context, DetailUserActivity::class.java)
-            detailIntent.putExtra(DetailUserActivity.EXTRA_USER, dataUser)
-            it.context.startActivity(detailIntent)
-        }
-
-
     }
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

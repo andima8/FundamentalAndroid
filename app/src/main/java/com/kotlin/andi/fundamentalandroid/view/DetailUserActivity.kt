@@ -12,12 +12,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.kotlin.andi.fundamentalandroid.R
 import com.kotlin.andi.fundamentalandroid.adapter.ViewPagerAdapter
-import com.kotlin.andi.fundamentalandroid.invisible
 import com.kotlin.andi.fundamentalandroid.model.User
 import com.kotlin.andi.fundamentalandroid.viewmodel.MainViewModel
-import com.kotlin.andi.fundamentalandroid.visible
 import kotlinx.android.synthetic.main.activity_detail_user.*
-import kotlinx.android.synthetic.main.activity_main.*
+
 
 
 class DetailUserActivity : AppCompatActivity() {

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Github User</string>
-    <string name="username_logo">"@"%1$s</string>
     <string name="name">Name</string>
     <string name="following">Following</string>
     <string name="follower">Follower</string>
     <string name="username">Username</string>
     <string name="company">Company</string>
-    <string name="repository">Repository</string>
     <string name="location">Location</string>
-    <string name="search">Search</string>
     <string name="language">Change Language Setting</string>
     <string name="search_hint">Search Username</string>
     <string name="user_not_found">User Not Found</string>
