@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name"> Pengguna Github</string>
+    <string name="username_logo">"@"%1$s</string>
+    <string name="name">Nama</string>
+    <string name="following">Mengikuti</string>
+    <string name="follower">Pengikut</string>
+    <string name="username">nama pengguna</string>
+    <string name="company">Perusahaan</string>
+    <string name="repository">Penyimpanan</string>
+    <string name="location">Lokasi</string>
+    <string name="search">Mencari</string>
+    <string name="language">Ganti Bahasa</string>
+    <string name="search_hint">Cari Nama Pengguna</string>
+    <string name="user_not_found">Pengguna Tidak Ditemukan</string>
+    <string name="your_search_show_here">Hasil Anda Ditampilkan Disini</string>
+
+</resources>
