@@ -11,5 +11,10 @@
     <string name="search_hint">Cari Nama Pengguna</string>
     <string name="user_not_found">Pengguna Tidak Ditemukan</string>
     <string name="your_search_show_here">Hasil Anda Ditampilkan Disini</string>
+    <string name="search_not_found">Pencarian Tidak Ditemukan</string>
+    <string name="start_search">Mulai Pencarian</string>
+    <string name="repository">Repository</string>
+    <string name="location_unknown">Tidak Diketahui</string>
+    <string name="gists">Gists</string>
 
 </resources>

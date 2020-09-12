@@ -16,5 +16,6 @@ data class User(
     var location: String? = null,
     var name: String? = null,
     var repository:  String? = null,
+    var gists: String? = null,
     var username: String? = null
 ): Parcelable

@@ -14,6 +14,9 @@
     <string name="your_search_show_here">Your Search Show Here</string>
     <string name="search_not_found">Search Not Found</string>
     <string name="start_search">Start Search</string>
+    <string name="repository">Repository</string>
+    <string name="location_unknown">Unknown</string>
+    <string name="gists">Gists</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

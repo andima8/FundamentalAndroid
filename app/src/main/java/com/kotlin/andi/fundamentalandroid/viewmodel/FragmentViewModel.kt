@@ -26,10 +26,10 @@ class FragmentViewModel: ViewModel() {
                 headers: Array<Header>,
                 responseBody: ByteArray
             ) {
-                val result = responseBody?.let { String(it) }
+                val result = String(responseBody)
                 try {
                     val jsonArray = JSONArray(result)
-                    Log.d("Hasil", "${result}")
+                    Log.d("Result", result)
                     for(i in 0 until jsonArray.length()){
                         val user = jsonArray.getJSONObject(i)
                         val userItems = User()
@@ -75,10 +75,10 @@ class FragmentViewModel: ViewModel() {
                 headers: Array<Header>,
                 responseBody: ByteArray
             ) {
-                val result = responseBody?.let { String(it) }
+                val result = String(responseBody)
                 try {
                     val jsonArray = JSONArray(result)
-                    Log.d("Hasil", "${result}")
+                    Log.d("Result", result)
                     for(i in 0 until jsonArray.length()){
                         val user = jsonArray.getJSONObject(i)
                         val userItems = User()
