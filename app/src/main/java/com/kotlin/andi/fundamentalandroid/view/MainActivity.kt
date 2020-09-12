@@ -33,9 +33,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.apply {
             setDisplayShowHomeEnabled(true)
-            title = ""
-            setLogo(R.drawable.github)
-            setDisplayUseLogoEnabled(true)
         }
         searchView = findViewById(R.id.sv_main)
         adapter = UserAdapter(listUser)

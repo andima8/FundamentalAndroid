@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.kotlin.andi.fundamentalandroid.view.MainActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
-class SplashScreen : AppCompatActivity(),
+class SplashScreenActivity : AppCompatActivity(),
     LoadingImplementation {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class SplashScreen : AppCompatActivity(),
     }
 
     override fun loading() {
-        val startIntent = Intent(this@SplashScreen, MainActivity::class.java)
+        val startIntent = Intent(this@SplashScreenActivity, MainActivity::class.java)
         startActivity(startIntent)
         finish()
     }
