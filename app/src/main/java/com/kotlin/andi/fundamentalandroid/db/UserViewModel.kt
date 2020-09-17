@@ -9,8 +9,8 @@ import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllUser: LiveData<List<UserDBModel>>
-    private val repository: UserRepository
+    private val readAllUser: LiveData<List<UserDBModel>> //remove private if using it in Favorite Class
+    val repository: UserRepository
 
     init {
         val userDao = UserDatabase.getDatabase(application).userDao()
@@ -18,9 +18,17 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         readAllUser = repository.readAllUser
     }
 
+    fun checkUser(username: String): LiveData<List<UserDBModel>> = repository.checkUser(username)
+
     fun addUser(userDBModel: UserDBModel){
         viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(userDBModel)
+        }
+    }
+
+    fun deleteUser(userDBModel: UserDBModel){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteUser(userDBModel)
         }
     }
 
