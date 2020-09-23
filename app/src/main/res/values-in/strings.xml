@@ -16,5 +16,7 @@
     <string name="repository">Repository</string>
     <string name="location_unknown">Tidak Diketahui</string>
     <string name="gists">Gists</string>
+    <string name="home">Menu Utama</string>
+    <string name="favorite">Favorit</string>
 
 </resources>

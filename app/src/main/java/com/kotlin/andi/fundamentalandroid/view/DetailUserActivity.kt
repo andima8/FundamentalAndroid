@@ -27,6 +27,7 @@ class DetailUserActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_USER = "extra_user"
+        const val EXTRA_DB = "extra_db"
     }
 
     private lateinit var detailViewModel: DetailViewModel
@@ -40,12 +41,20 @@ class DetailUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_user)
         setupWindowAnimations()
-        val data = intent.getParcelableExtra<User>(EXTRA_USER)
-        tv_username.text = data?.username.toString()
-        username = data?.username.toString()
-        avatar = data?.avatar.toString()
-        Glide.with(this).load(avatar).into(profile_user)
 
+        if (intent.getParcelableExtra<User>(EXTRA_USER) != null) {
+            val data = intent.getParcelableExtra<User>(EXTRA_USER)
+            tv_username.text = data?.username.toString()
+            username = data?.username.toString()
+            avatar = data?.avatar.toString()
+            Glide.with(this).load(avatar).into(profile_user)
+        } else if (intent.getParcelableExtra<UserDBModel>(EXTRA_DB) != null) {
+            val dataDB = intent.getParcelableExtra<UserDBModel>(EXTRA_DB)
+            tv_username.text = dataDB?.username.toString()
+            username = dataDB?.username.toString()
+            avatar = dataDB?.avatar.toString()
+            Glide.with(this).load(avatar).into(profile_user)
+        }
 
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         initObserver()

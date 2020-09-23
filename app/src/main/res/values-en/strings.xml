@@ -16,5 +16,7 @@
     <string name="repository">Repository</string>
     <string name="location_unknown">Unknown</string>
     <string name="gists">Gists</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
 
 </resources>

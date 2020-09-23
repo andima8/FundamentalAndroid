@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllUser: LiveData<List<UserDBModel>> //remove private if using it in Favorite Class
+    val readAllUser: LiveData<List<UserDBModel>> //remove private if using it in Favorite Class
     val repository: UserRepository
 
     init {
