@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false"
+    >
+
+    <SwitchPreferenceCompat
+        android:key="@string/key"
+        android:defaultValue="false"
+        android:title="Reminder 09:00 AM"
+        app:summaryOff="@string/alarm_canceled"
+        app:summaryOn="@string/alarm_enabled"
+        android:icon="@drawable/ic_alarm"
+        />
+
+
+</PreferenceScreen>

@@ -3,11 +3,11 @@ package com.kotlin.andi.fundamentalandroid.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.kotlin.andi.fundamentalandroid.R
+import com.kotlin.andi.fundamentalandroid.view.settings.SettingActivity
 import com.kotlin.andi.fundamentalandroid.view.fragment.FavoriteFragment
 import com.kotlin.andi.fundamentalandroid.view.fragment.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -49,10 +49,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.change_language) {
-            val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+        //if (item.itemId == R.id.change_language) {
+            val mIntent = Intent(this, SettingActivity::class.java)
+                //Intent(Settings.ACTION_LOCALE_SETTINGS)
             startActivity(mIntent)
-        }
+
         return super.onOptionsItemSelected(item)
     }
 

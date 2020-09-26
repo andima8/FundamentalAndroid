@@ -18,5 +18,12 @@
     <string name="gists">Gists</string>
     <string name="home">Home</string>
     <string name="favorite">Favorite</string>
+    <string name="alarm_enabled">Enabled</string>
+    <string name="alarm_canceled" >Canceled</string>
+    <string name="time">09:00</string>
+    <string name="message">reminder</string>
+    <string name="settings">Setting</string>
+    <string name="new_user">Time to find new User!</string>
+    <string name="hello">Hello</string>
 
 </resources>

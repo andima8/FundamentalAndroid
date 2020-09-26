@@ -18,5 +18,12 @@
     <string name="gists">Gists</string>
     <string name="home">Menu Utama</string>
     <string name="favorite">Favorit</string>
+    <string name="alarm_enabled">Dihidupkan</string>
+    <string name="alarm_canceled">Dimatikan</string>
+    <string name="time">09:00</string>
+    <string name="message">pengingat</string>
+    <string name="settings">Pengaturan</string>
+    <string name="new_user">Waktunya mencari pengguna baru!</string>
+    <string name="hello">Halo</string>
 
 </resources>
