@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name"> Pengguna Github</string>
+    <string name="app_name">Pengguna Github</string>
     <string name="name">Nama</string>
     <string name="following">Mengikuti</string>
     <string name="follower">Pengikut</string>

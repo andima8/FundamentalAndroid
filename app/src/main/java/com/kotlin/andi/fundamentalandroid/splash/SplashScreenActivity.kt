@@ -7,6 +7,7 @@ import com.kotlin.andi.fundamentalandroid.R
 import com.kotlin.andi.fundamentalandroid.view.MainActivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
+@Suppress("DEPRECATION")
 class SplashScreenActivity : AppCompatActivity(),
     LoadingImplementation {
     override fun onCreate(savedInstanceState: Bundle?) {

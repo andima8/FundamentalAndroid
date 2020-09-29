@@ -1,19 +1,15 @@
-package com.kotlin.andi.fundamentalandroid.db
+package com.kotlin.andi.consumerapp.model
 
 import android.os.Parcelable
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 
-@Entity(tableName = "user_table")
 @Parcelize
 data class UserDBModel(
-    @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
     var avatar: String? = null,
     var company: String? = null,
-    var follower:  String? = null,
+    var follower: String? = null,
     var following:  String? = null,
     var location: String? = null,
     var name: String? = null,

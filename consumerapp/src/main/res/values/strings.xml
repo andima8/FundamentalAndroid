@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Github User</string>
+    <string name="app_name">ConsumerApp</string>
     <!-- Other string resources-->
 
     <string name="name">Name</string>
@@ -38,5 +38,6 @@
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
+
 
 </resources>

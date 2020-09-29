@@ -7,4 +7,5 @@
     android:orientation="vertical"
     tools:context=".view.settings.SettingActivity">
 
+
 </LinearLayout>

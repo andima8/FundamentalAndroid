@@ -4,6 +4,7 @@
     app:iconSpaceReserved="false"
     >
 
+
     <SwitchPreferenceCompat
         android:key="@string/key"
         android:defaultValue="false"
@@ -13,5 +14,12 @@
         android:icon="@drawable/ic_alarm"
         />
 
+    <ListPreference
+        app:entries="@array/Language"
+        app:title="@string/language"
+        app:key="@string/list"
+        app:entryValues="@array/Language"
+        app:icon="@drawable/ic_language"
+        />
 
 </PreferenceScreen>

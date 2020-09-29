@@ -136,7 +136,7 @@ class DetailUserActivity : AppCompatActivity() {
     private fun removeFromFavorite() {
         userDBModel.let {
             userViewModel.deleteUser(it)
-            userViewModel.checkUser(it.username)
+            userViewModel.checkUser(it.username!!)
         }
         Toast.makeText(this, "Delete from Database", Toast.LENGTH_SHORT).show()
     }
