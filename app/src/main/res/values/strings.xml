@@ -24,9 +24,7 @@
     <string name="alarm_canceled">Canceled</string>
     <string name="key" translatable="false">switch</string>
     <string name="time" translatable="false">09:00</string>
-    <string name="message">reminder</string>
     <string name="settings">Setting</string>
-    <string name="reminder_time" translatable="false">09:00</string>
     <string name="key_switch" translatable="false">switch</string>
     <string name="new_user">Time to find new User!</string>
     <string name="hello">Hello</string>
@@ -39,7 +37,6 @@
     <string name="no_favorite">No Favorite</string>
     <string name="add_favorite">Add to Favorite</string>
     <string name="delete_favorite">Delete from Favorite</string>
-    <string name="press">Press the button once again to exit</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

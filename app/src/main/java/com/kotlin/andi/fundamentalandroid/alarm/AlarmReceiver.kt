@@ -1,5 +1,6 @@
 package com.kotlin.andi.fundamentalandroid.alarm
 
+import android.annotation.SuppressLint
 import android.app.*
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -25,6 +26,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
     private val TAG = AlarmReceiver::class.java.simpleName
 
+    @SuppressLint("UnsafeProtectedBroadcastReceiver")
     override fun onReceive(context: Context, intent: Intent) {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
         showAlarmNotification(context)
@@ -57,7 +59,7 @@ class AlarmReceiver : BroadcastReceiver() {
             pendingIntent
         )
 
-        Toast.makeText(context, "Repeating alarm set up on $time", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, R.string.alarm_enabled, Toast.LENGTH_SHORT).show()
         Log.d(TAG, "Alarm $time On")
     }
 
@@ -69,7 +71,7 @@ class AlarmReceiver : BroadcastReceiver() {
         val pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, 0)
         pendingIntent.cancel()
         alarmManager.cancel(pendingIntent)
-        Toast.makeText(context, "Repeating alarm dibatalkan", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, R.string.alarm_canceled, Toast.LENGTH_SHORT).show()
         Log.d(TAG, "Alarm off")
     }
 
@@ -114,19 +116,6 @@ class AlarmReceiver : BroadcastReceiver() {
         notificationManagerCompat.notify(ID_REPEATING, notification)
 
     }
-
-    fun isAlarmSet(context: Context): Boolean {
-        val intent = Intent(context, AlarmReceiver::class.java)
-        val requestCode =
-            ID_REPEATING
-        return PendingIntent.getBroadcast(
-            context,
-            requestCode,
-            intent,
-            PendingIntent.FLAG_NO_CREATE
-        ) != null
-    }
-
 
     private fun isDateInvalid(date: String, format: String): Boolean {
         return try {

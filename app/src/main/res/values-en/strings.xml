@@ -17,16 +17,13 @@
     <string name="gists">Gists</string>
     <string name="home">Home</string>
     <string name="favorite">Favorite</string>
-    <string name="alarm_enabled">Enabled</string>
-    <string name="alarm_canceled" >Canceled</string>
-    <string name="time">09:00</string>
-    <string name="message">reminder</string>
+    <string name="alarm_enabled">Alarm is set up 09.00 AM</string>
+    <string name="alarm_canceled" >Alarm Canceled</string>
     <string name="settings">Setting</string>
     <string name="new_user">Time to find new User!</string>
     <string name="hello">Hello</string>
     <string name="no_favorite">No Favorite</string>
     <string name="add_favorite">Add to Favorite</string>
     <string name="delete_favorite">Delete from Favorite</string>
-    <string name="press">Press the button once again to exit</string>
 
 </resources>

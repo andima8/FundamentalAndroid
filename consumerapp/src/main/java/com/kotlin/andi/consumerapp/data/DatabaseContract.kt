@@ -6,7 +6,7 @@ import com.kotlin.andi.consumerapp.data.DatabaseContract.UserColumns.Companion.T
 
 object DatabaseContract {
     private const val AUTHORITY = "com.kotlin.andi.fundamentalandroid"
-    private val SCHEME = "content"
+    private const val SCHEME = "content"
 
     class UserColumns : BaseColumns {
         companion object {

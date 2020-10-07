@@ -8,7 +8,6 @@ import com.kotlin.andi.fundamentalandroid.BuildConfig
 import com.kotlin.andi.fundamentalandroid.model.User
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
-
 import cz.msebera.android.httpclient.Header
 import org.json.JSONObject
 

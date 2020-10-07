@@ -1,7 +1,6 @@
 package com.kotlin.andi.fundamentalandroid.db
 
 import android.database.Cursor
-import android.widget.CursorAdapter
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.kotlin.andi.fundamentalandroid.model.UserDBModel

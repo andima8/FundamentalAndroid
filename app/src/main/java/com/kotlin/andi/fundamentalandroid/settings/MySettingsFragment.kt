@@ -6,7 +6,6 @@ import android.content.res.Configuration
 import android.content.res.Resources
 import android.os.Bundle
 import android.util.DisplayMetrics
-import android.widget.ProgressBar
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
@@ -25,7 +24,6 @@ class MySettingsFragment : PreferenceFragmentCompat(),
     private lateinit var alarmReceiver: AlarmReceiver
     private lateinit var switchPreferenceCompat: SwitchPreferenceCompat
     private lateinit var listPreference: ListPreference
-    private lateinit var progressBar: ProgressBar
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
@@ -88,14 +86,14 @@ class MySettingsFragment : PreferenceFragmentCompat(),
     private fun restartActivity() {
         val intent = Intent(activity, SettingActivity::class.java)
         activity?.finish()
-        activity?.overridePendingTransition(0, 0);
+        activity?.overridePendingTransition(0, 0)
         startActivity(intent)
     }
 
     private fun setReminder(state: Boolean) {
         if (state) {
             context?.let {
-                val time = "09:00"
+                val time = resources.getString(R.string.time)
                 alarmReceiver.setRepeatingAlarm(it, time)
         }
         } else {
