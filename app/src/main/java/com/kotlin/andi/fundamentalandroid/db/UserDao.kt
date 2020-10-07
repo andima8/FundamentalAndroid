@@ -4,6 +4,7 @@ import android.database.Cursor
 import android.widget.CursorAdapter
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.kotlin.andi.fundamentalandroid.model.UserDBModel
 
 
 @Dao
@@ -24,5 +25,8 @@ interface UserDao {
     @Delete
     suspend fun deleteUser(userModel: UserDBModel)
 
+    //for widget
+    @Query("SELECT * FROM user_table ORDER BY id ASC")
+    fun getUserWidget(): List<UserDBModel>
 
 }

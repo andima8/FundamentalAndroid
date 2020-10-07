@@ -1,5 +1,6 @@
-package com.kotlin.andi.fundamentalandroid.view.settings
+package com.kotlin.andi.fundamentalandroid.settings
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.content.res.Resources
@@ -81,6 +82,14 @@ class MySettingsFragment : PreferenceFragmentCompat(),
         resources.updateConfiguration(configuration, displayMetrics)
         configuration.locale = Locale(localeCode.toLowerCase(Locale.getDefault()))
         resources.updateConfiguration(configuration, displayMetrics)
+        restartActivity()
+    }
+
+    private fun restartActivity() {
+        val intent = Intent(activity, SettingActivity::class.java)
+        activity?.finish()
+        activity?.overridePendingTransition(0, 0);
+        startActivity(intent)
     }
 
     private fun setReminder(state: Boolean) {

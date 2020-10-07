@@ -1,8 +1,8 @@
-package com.kotlin.andi.consumerapp
+package com.kotlin.andi.consumerapp.data
 
 import android.net.Uri
 import android.provider.BaseColumns
-import com.kotlin.andi.consumerapp.DatabaseContract.UserColumns.Companion.TABLE_NAME
+import com.kotlin.andi.consumerapp.data.DatabaseContract.UserColumns.Companion.TABLE_NAME
 
 object DatabaseContract {
     private const val AUTHORITY = "com.kotlin.andi.fundamentalandroid"

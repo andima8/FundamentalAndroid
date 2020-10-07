@@ -1,8 +1,10 @@
-package com.kotlin.andi.fundamentalandroid.view.settings
+package com.kotlin.andi.fundamentalandroid.settings
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kotlin.andi.fundamentalandroid.R
+import com.kotlin.andi.fundamentalandroid.view.MainActivity
 
 class SettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,11 @@ class SettingActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return super.onSupportNavigateUp()
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
 }

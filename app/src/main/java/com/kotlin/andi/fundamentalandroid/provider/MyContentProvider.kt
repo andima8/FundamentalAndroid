@@ -1,4 +1,4 @@
-package com.kotlin.andi.fundamentalandroid
+package com.kotlin.andi.fundamentalandroid.provider
 
 import android.content.ContentProvider
 import android.content.ContentValues
@@ -21,7 +21,11 @@ class MyContentProvider : ContentProvider() {
         private val uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
 
         init {
-            uriMatcher.addURI(AUTHORITY, TABLE_NAME, USER)
+            uriMatcher.addURI(
+                AUTHORITY,
+                TABLE_NAME,
+                USER
+            )
         }
 
     }

@@ -1,21 +1,18 @@
-package com.kotlin.andi.consumerapp
+package com.kotlin.andi.consumerapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.BounceInterpolator
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import com.kotlin.andi.consumerapp.DatabaseContract.CONTENT_URI
+import com.kotlin.andi.consumerapp.R
+import com.kotlin.andi.consumerapp.adapter.MainAdapter
 import com.kotlin.andi.consumerapp.model.UserDBModel
+import com.kotlin.andi.consumerapp.viewmodel.UserViewModel
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 

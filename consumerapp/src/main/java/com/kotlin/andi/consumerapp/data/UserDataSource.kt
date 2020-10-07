@@ -1,8 +1,7 @@
-package com.kotlin.andi.consumerapp
+package com.kotlin.andi.consumerapp.data
 
 import android.content.ContentResolver
-import com.kotlin.andi.consumerapp.DatabaseContract
-import com.kotlin.andi.consumerapp.DatabaseContract.CONTENT_URI
+import com.kotlin.andi.consumerapp.data.DatabaseContract.CONTENT_URI
 import com.kotlin.andi.consumerapp.model.UserDBModel
 
 class UserDataSource(private val contentResolver: ContentResolver) {

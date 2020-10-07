@@ -10,9 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.andi.fundamentalandroid.R
 import com.kotlin.andi.fundamentalandroid.adapter.FavoriteAdapter
-import com.kotlin.andi.fundamentalandroid.db.UserDBModel
-import com.kotlin.andi.fundamentalandroid.db.UserViewModel
+import com.kotlin.andi.fundamentalandroid.invisible
+import com.kotlin.andi.fundamentalandroid.model.UserDBModel
+import com.kotlin.andi.fundamentalandroid.viewmodel.UserViewModel
 import com.kotlin.andi.fundamentalandroid.view.DetailUserActivity
+import com.kotlin.andi.fundamentalandroid.visible
+import kotlinx.android.synthetic.main.fragment_favorite.*
 
 class FavoriteFragment : Fragment() {
 
@@ -32,9 +35,7 @@ class FavoriteFragment : Fragment() {
         userViewModel = ViewModelProvider(
             this
         ).get(UserViewModel::class.java)
-
         showUserFavorite()
-
         return rootView
     }
 
@@ -44,6 +45,13 @@ class FavoriteFragment : Fragment() {
         userViewModel.readAllUser.observe(viewLifecycleOwner, Observer { items ->
             if (items != null) {
                 adapter.setData(items)
+                if (adapter.itemCount ==0) {
+                    tv_fav_notFound.visible()
+                    iv_fav_notFound.visible()
+                } else {
+                    iv_fav_notFound.invisible()
+                    iv_fav_notFound.invisible()
+                }
             }
         })
 

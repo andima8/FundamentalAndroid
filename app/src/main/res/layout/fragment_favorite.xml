@@ -7,6 +7,32 @@
     android:background="@drawable/purple_gradient"
     tools:context=".view.fragment.FavoriteFragment">
 
+    <TextView
+        android:id="@+id/tv_fav_notFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_not_found"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/iv_fav_notFound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_favorite"
+        app:layout_constraintVertical_bias="0.92" />
+    <ImageView
+        android:id="@+id/iv_fav_notFound"
+        android:layout_width="263dp"
+        android:layout_height="351dp"
+        android:contentDescription="@string/search_not_found"
+        android:src="@drawable/not_found"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_favorite"
         android:layout_width="match_parent"

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Github User</string>
     <string name="name">Name</string>
     <string name="following">Following</string>
     <string name="follower">Follower</string>
@@ -25,5 +24,9 @@
     <string name="settings">Setting</string>
     <string name="new_user">Time to find new User!</string>
     <string name="hello">Hello</string>
+    <string name="no_favorite">No Favorite</string>
+    <string name="add_favorite">Add to Favorite</string>
+    <string name="delete_favorite">Delete from Favorite</string>
+    <string name="press">Press the button once again to exit</string>
 
 </resources>

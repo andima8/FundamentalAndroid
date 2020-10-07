@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Pengguna Github</string>
+
     <string name="name">Nama</string>
     <string name="following">Mengikuti</string>
     <string name="follower">Pengikut</string>
@@ -25,5 +25,9 @@
     <string name="settings">Pengaturan</string>
     <string name="new_user">Waktunya mencari pengguna baru!</string>
     <string name="hello">Halo</string>
+    <string name="no_favorite">Tidak ada yang disukai</string>
+    <string name="add_favorite">Ditambahkan ke Favorit</string>
+    <string name="delete_favorite">Dihapus dari Favorit</string>
+    <string name="press">Ketuk tombol kembali untuk keluar</string>
 
 </resources>

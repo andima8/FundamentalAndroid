@@ -1,4 +1,4 @@
-package com.kotlin.andi.consumerapp
+package com.kotlin.andi.consumerapp.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData

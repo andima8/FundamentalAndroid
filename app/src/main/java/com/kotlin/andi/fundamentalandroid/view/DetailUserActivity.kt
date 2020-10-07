@@ -14,8 +14,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.kotlin.andi.fundamentalandroid.R
 import com.kotlin.andi.fundamentalandroid.adapter.ViewPagerAdapter
-import com.kotlin.andi.fundamentalandroid.db.UserDBModel
-import com.kotlin.andi.fundamentalandroid.db.UserViewModel
+import com.kotlin.andi.fundamentalandroid.model.UserDBModel
+import com.kotlin.andi.fundamentalandroid.viewmodel.UserViewModel
 import com.kotlin.andi.fundamentalandroid.invisible
 import com.kotlin.andi.fundamentalandroid.model.User
 import com.kotlin.andi.fundamentalandroid.viewmodel.DetailViewModel
@@ -98,21 +98,22 @@ class DetailUserActivity : AppCompatActivity() {
         val following = tv_following.text.toString()
         val location = tv_location.text.toString()
         //create user object
-        val inputUserDBModel = UserDBModel(
-            0,
-            avatar,
-            company,
-            follower,
-            following,
-            location,
-            name,
-            repository,
-            gists,
-            username
-        )
+        val inputUserDBModel =
+            UserDBModel(
+                0,
+                avatar,
+                company,
+                follower,
+                following,
+                location,
+                name,
+                repository,
+                gists,
+                username
+            )
         //Add data to database
         userViewModel.addUser(inputUserDBModel)
-        Toast.makeText(this, "Add to Database", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.add_favorite), Toast.LENGTH_SHORT).show()
     }
 
     private fun initObserver() {
@@ -138,7 +139,7 @@ class DetailUserActivity : AppCompatActivity() {
             userViewModel.deleteUser(it)
             userViewModel.checkUser(it.username!!)
         }
-        Toast.makeText(this, "Delete from Database", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.delete_favorite), Toast.LENGTH_SHORT).show()
     }
 
 

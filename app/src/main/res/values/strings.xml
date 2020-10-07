@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Github User</string>
+    <string name="app_name" translatable="false">Github User</string>
     <!-- Other string resources-->
 
     <string name="name">Name</string>
@@ -36,6 +36,10 @@
         <item>English</item>
         <item>Bahasa Indonesia</item>
     </string-array>
+    <string name="no_favorite">No Favorite</string>
+    <string name="add_favorite">Add to Favorite</string>
+    <string name="delete_favorite">Delete from Favorite</string>
+    <string name="press">Press the button once again to exit</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

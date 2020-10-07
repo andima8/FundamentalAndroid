@@ -1,6 +1,7 @@
 package com.kotlin.andi.fundamentalandroid.db
 
 import androidx.lifecycle.LiveData
+import com.kotlin.andi.fundamentalandroid.model.UserDBModel
 
 class UserRepository(private  val userDao: UserDao){
 

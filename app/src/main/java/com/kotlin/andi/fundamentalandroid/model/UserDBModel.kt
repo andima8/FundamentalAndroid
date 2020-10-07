@@ -1,4 +1,4 @@
-package com.kotlin.andi.fundamentalandroid.db
+package com.kotlin.andi.fundamentalandroid.model
 
 import android.os.Parcelable
 import androidx.room.Entity

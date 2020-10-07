@@ -4,9 +4,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.kotlin.andi.fundamentalandroid.BuildConfig
 import com.kotlin.andi.fundamentalandroid.model.User
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
+
 import cz.msebera.android.httpclient.Header
 import org.json.JSONObject
 
@@ -16,7 +18,7 @@ class DetailViewModel : ViewModel() {
 
     fun setDetailUsers(username: String?){
         val client =  AsyncHttpClient()
-        client.addHeader("Authorization","token 3d67cafe4d59b005a32939415427d246028c9d84")
+        client.addHeader("Authorization","token " + BuildConfig.GITHUB_TOKEN)
         client.addHeader("User-Agent", "request")
         val url = " https://api.github.com/users/${username}"
         client.get(url, object: AsyncHttpResponseHandler(){

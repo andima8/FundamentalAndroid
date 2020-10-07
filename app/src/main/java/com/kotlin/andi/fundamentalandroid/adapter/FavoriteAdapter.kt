@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.kotlin.andi.fundamentalandroid.R
-import com.kotlin.andi.fundamentalandroid.db.UserDBModel
+import com.kotlin.andi.fundamentalandroid.model.UserDBModel
 import kotlinx.android.synthetic.main.user_list.view.*
 
 class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.FavoriteHolder>() {
